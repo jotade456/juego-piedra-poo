@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel, Tijera, Lagarto, Spock</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="inicio_sesion">
+        <h1>Inicio de sesión</h1>
+        <label>Nombre</label><br>
+        <input type="text" id="nombre"><br><br>
+        <label>Correo electrónico</label><br>
+        <input type="email" id="correo"><br><br>
+        <label>Contraseña</label><br>
+        <input type="password" id="contraseña"><br><br>
+        <button onclick="iniciar_sesion()">Iniciar sesión</button>
+        <p>¿No tienes una cuenta? <a href="#" onclick="mostrar_registro()">Regístrate aquí</a></p>
+    </div>
+
+    <div id="inicio_registro" style="display: none;">
+        <h1>Registrarse</h1>
+        <label>Nombre</label><br>
+        <input type="text" id="registrar_nombre"><br><br>
+        <label>Correo electrónico</label><br>
+        <input type="email" id="registrar_correo"><br><br>
+        <label>Contraseña</label><br>
+        <input type="password" id="registrar_contraseña"><br><br>
+        <button onclick="registrar()">Registrarse</button>
+        <p>¿Ya tienes una cuenta? <a href="#" onclick="mostrar_inicio()">Inicia sesión aquí</a></p>
+    </div>
+
+    <div id="juego" style="display: none;">
+        <h1>¡Bienvenido al juego!</h1>
+        <p>Elige una opción:</p>
+        <button onclick="juego.jugar('Piedra')">Piedra</button>
+        <button onclick="juego.jugar('Papel')">Papel</button>
+        <button onclick="juego.jugar('Tijera')">Tijera</button>
+        <button onclick="juego.jugar('Lagarto')">Lagarto</button>
+        <button onclick="juego.jugar('Spock')">Spock</button>
+        <p id="mensaje"></p>
+    </div>
+</body>
+</html>
